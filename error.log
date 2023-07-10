@@ -244,3 +244,9 @@
 2023-07-10T11:29:30.868-04:00 DEBUG 23696 --- [http-nio-8081-exec-8] org.hibernate.SQL                        : select next_val as id_val from contacts_seq for update
 2023-07-10T11:29:30.874-04:00 DEBUG 23696 --- [http-nio-8081-exec-8] org.hibernate.SQL                        : update contacts_seq set next_val= ? where next_val=?
 2023-07-10T11:29:30.882-04:00 DEBUG 23696 --- [http-nio-8081-exec-8] org.hibernate.SQL                        : insert into contacts (email, first_name, last_name, message, phone_number, id) values (?, ?, ?, ?, ?, ?)
+2023-07-10T15:49:12.705-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-07-10T15:49:12.854-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-10T15:49:12.867-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-10T15:49:12.912-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-10T15:49:12.972-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-10T15:49:12.982-04:00  INFO 23696 --- [RMI TCP Connection(265)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
