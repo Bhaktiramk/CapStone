@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lunch Menu</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a th:href="@{/index}">Home</a></li>
+				<li><a th:href="@{/Reservation}">Reservation</a></li>
+				<li><a href="#">Menu</a>
+					<ul class="dropdown-menu">
+						<li><a th:href="@{/menu}">Coffee</a></li>
+						<li><a th:href="@{/Breakfast}">Breakfast</a></li>
+						<li><a th:href="@{/Lunch}">Lunch</a></li>
+						<li><a th:href="@{/Dinner}">Dinner</a></li>
+						<li><a th:href="@{/Special}">Special</a></li>
+						<li><a th:href="@{/Beverage}">Beverage</a></li>
+					</ul>
+				</li>
+				<li><a th:href="@{/contact}">Contact</a></li>
+				<li id="nav-right">
+					<a th:href="@{/login}">login</a>
+					<a th:href="@{/signup}">signup</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Lunch Menu</h1>
+
+		<div class="menu-items">
+			<div class="menu-item">
+				<h2>Grilled Chicken Salad</h2>
+				<p>Fresh mixed greens</p>
+				<p>Grilled chicken breast</p>
+				<p>Cherry tomatoes</p>
+				<p>Cucumbers</p>
+				<p>Red onions</p>
+				<p>Kalamata olives</p>
+				<p>Feta cheese</p>
+				<p>Greek dressing</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Classic Cheeseburger</h2>
+				<p>Beef patty</p>
+				<p>American cheese</p>
+				<p>Lettuce</p>
+				<p>Tomato</p>
+				<p>Onion</p>
+				<p>Pickle</p>
+				<p>Ketchup and mustard</p>
+				<p>Sesame seed bun</p>
+				<p>Served with fries or side salad</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Caesar Wrap</h2>
+				<p>Grilled chicken</p>
+				<p>Romaine lettuce</p>
+				<p>Shredded Parmesan cheese</p>
+				<p>Caesar dressing</p>
+				<p>Wrapped in a flour tortilla</p>
+				<p>Served with fries or side salad</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Margherita Pizza</h2>
+				<p>Thin crust</p>
+				<p>Tomato sauce</p>
+				<p>Fresh mozzarella cheese</p>
+				<p>Basil leaves</p>
+				<p>Olive oil</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Chicken Alfredo Pasta</h2>
+				<p>Grilled chicken</p>
+				<p>Fettuccine pasta</p>
+				<p>Creamy Alfredo sauce</p>
+				<p>Garlic bread</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Garden Vegetable Wrap</h2>
+				<p>Grilled zucchini</p>
+				<p>Roasted red peppers</p>
+				<p>Spinach</p>
+				<p>Red onions</p>
+				<p>Provolone cheese</p>
+				<p>Garlic aioli</p>
+				<p>Wrapped in a spinach tortilla</p>
+				<p>Served with fries or side salad</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Shrimp Scampi</h2>
+				<p>Sautéed shrimp</p>
+				<p>Garlic butter sauce</p>
+				<p>Lemon wedges</p>
+				<p>Served with rice pilaf and steamed vegetables</p>
+			</div>
+
+			<div class="menu-item">
+				<h2>Veggie Delight Sandwich</h2>
+				<p>Sliced avocado</p>
+				<p>Cucumber</p>
+				<p>Carrots</p>
+				<p>Tomato</p>
+				<p>Red onion</p>
+				<p>Lettuce</p>
+				<p>Mayonnaise</p>
+				<p>Served on multigrain bread</p>
+				<p>Served with fries or side salad</p>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="footer-content">
+			<div class="footer-section about">
+				<h3>About Us</h3>
+				<p>Welcome to our Asian Style Cafe, a vibrant destination for delightful breakfast and lunch
+					experiences. We take pride in being your preferred choice for invigorating, wholesome meals that
+					bring a sunny disposition to your day.</p>
+			</div>
+			<div class="footer-section contact">
+				<h3>Contact Information</h3>
+				<p>
+					Address: 123 Main Street, Columbus, Ohio<br>
+					Phone: +1 614 567 8901<br>
+					Email: info@asianstylecafe.com
+				</p>
+			</div>
+			<div class="footer-section opening-times">
+				<h3>Opening Times</h3>
+				<p>
+					Monday—Thursday: 08:00 AM — 10:00 PM<br>
+					Friday—Saturday: 09:00 AM — 11:00 PM<br>
+					Sunday: 10:00 AM — 6:00 PM
+				</p>
+			</div>
+			<div class="footer-section links">
+				<h3>Quick Links</h3>
+				<ul>
+					<li><a th:href="@{/index}">Home</a></li>
+					<li><a th:href="@{/menu}">Menu</a></li>
+					<li><a th:href="@{/contact}">Contact</a></li>
+					<li><a th:href="@{/login}">Login</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			&copy; 2023 Asian Style Cafe. All rights reserved.
+		</div>
+	</footer>
+</body>
+
+</html>

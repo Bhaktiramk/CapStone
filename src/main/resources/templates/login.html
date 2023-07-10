@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <nav>
+        <ul>
+            <li><a th:href="@{/index}">Home</a></li>
+            <li><a th:href="@{/Reservation}">Reservation</a></li>
+            <li><a href="#">Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a th:href="@{/menu}">Coffee</a></li>
+                    <li><a th:href="@{/Breakfast}">Breakfast</a></li>
+                    <li><a th:href="@{/Lunch}">Lunch</a></li>
+                    <li><a th:href="@{/Dinner}">Dinner</a></li>
+                    <li><a th:href="@{/Special}">Special</a></li>
+                    <li><a th:href="@{/Beverage}">Beverage</a></li>
+                </ul>
+            </li>
+            <li><a th:href="@{/contact}">Contact</a></li>
+            <li id="nav-right">
+                <a th:href="@{/login}">login</a>
+                <a th:href="@{/signup}">signup</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Log in</h1>
+     <div class="card-body">
+                    <form
+                        method="post"
+                        role="form"
+                        th:action="@{/login}"
+                        class="form-horizontal"
+                    >
+                        <div class="form-group mb-3">
+                            <label class="control-label"> Email</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="form-control"
+                                placeholder="Enter email address"
+                            />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="control-label"> Password</label>
+                            <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="form-control"
+                                    placeholder="Enter password"
+                            />
+                        </div>
+                        <div class="form-group mb-3">
+                            <button type="submit" class="btn btn-primary" >Login</button>
+                            <span> Not registered ?
+                                <a th:href="@{/signup}">Register/Signup here</a>
+                            </span>
+                        </div>
+                    </form>
+</div>
+<footer>
+     <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Welcome to our Asian Style Cafe, a vibrant destination for delightful breakfast and lunch experiences. We take pride in being your preferred choice for invigorating, wholesome meals that bring a sunny disposition to your day.</p>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Information</h3>
+            <p>
+                Address: 123 Main Street, Columbus, Ohio<br>
+                Phone: +1 614 567 8901<br>
+                Email: info@asianstylecafe.com
+            </p>
+        </div>
+        <div class="footer-section opening-times">
+            <h3>Opening Times</h3>
+            <p>
+                Monday—Thursday: 08:00 AM — 10:00 PM<br>
+                Friday—Saturday: 09:00 AM — 11:00 PM<br>
+                Sunday: 10:00 AM — 6:00 PM
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2023 Asian Style Cafe. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

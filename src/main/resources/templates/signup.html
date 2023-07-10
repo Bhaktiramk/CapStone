@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CodeJava</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+     <nav>
+        <ul>
+            <li><a th:href="@{/index}">Home</a></li>
+            <li><a th:href="@{/Reservation}">Reservation</a></li>
+            <li><a href="#">Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a th:href="@{/menu}">Coffee</a></li>
+                    <li><a th:href="@{/Breakfast}">Breakfast</a></li>
+                    <li><a th:href="@{/Lunch}">Lunch</a></li>
+                    <li><a th:href="@{/Dinner}">Dinner</a></li>
+                    <li><a th:href="@{/Special}">Special</a></li>
+                    <li><a th:href="@{/Beverage}">Beverage</a></li>
+                </ul>
+            </li>
+            <li><a th:href="@{/contact}">Contact</a></li>
+            <li id="nav-right">
+                <a th:href="@{/login}">login</a>
+                <a th:href="@{/signup}">signup</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container text-center">
+    <div>
+        <h1>User Registration</h1>
+    </div>
+ <form
+            method="post"
+            role="form"
+            th:action="@{/add}"
+            th:object="${userDto}"
+          >
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" th:field="*{firstName}" id="firstName" name="firstName" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" th:field="*{lastName}" id="lastName" name="lastName" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" th:field="*{email}" id="email" name="email" class="form-control" required/>
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" th:field="*{password}" id="password" name="password" class="form-control" required minlength="6" maxlength="10"/>
+            <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+        </div>
+        <div class="form-group">
+            <label for="matchPassword">Password Confirmation:</label>
+            <input type="password" th:field="*{matchPassword}"  id="matchPassword" name="matchPassword" class="form-control" required minlength="6" maxlength="10"/>
+            <span th:if="${#fields.hasErrors('matchPassword')}" th:errors="*{matchPassword}"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Welcome to our Asian Style Cafe, a vibrant destination for delightful breakfast and lunch experiences. We take pride in being your preferred choice for invigorating, wholesome meals that bring a sunny disposition to your day.</p>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Information</h3>
+            <p>
+                Address: 123 Main Street, Columbus, Ohio<br>
+                Phone: +1 614 567 8901<br>
+                Email: info@asianstylecafe.com
+            </p>
+        </div>
+        <div class="footer-section opening-times">
+            <h3>Opening Times</h3>
+            <p>
+                Monday—Thursday: 08:00 AM — 10:00 PM<br>
+                Friday—Saturday: 09:00 AM — 11:00 PM<br>
+                Sunday: 10:00 AM — 6:00 PM
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+               <li><a th:href="@{/index}">Home</a></li>
+					<li><a th:href="@{/menu}">Menu</a></li>
+					<li><a th:href="@{/contact}">Contact</a></li>
+					<li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2023 Asian Style Cafe. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
